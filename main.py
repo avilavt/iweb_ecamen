@@ -39,7 +39,7 @@ if not os.path.isfile(database_name):
     #insercion de datos
     mensajeDB.sql_insert((0,'origen@email.iweb','destino@email.iweb','Primer mensaje', datetime.today()),0)
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def home():
     origen = 'origen@email.iweb'
     if request.method == 'POST':
