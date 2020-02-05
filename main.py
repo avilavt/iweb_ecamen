@@ -25,8 +25,8 @@ cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.secret_key = secrets.token_urlsafe(16)
 
-url_cliente = "http://127.0.0.1:5000"
-#url_cliente = "https://iwebcliente.appspot.com"
+#url_cliente = "http://127.0.0.1:5000"
+url_cliente = "http://iwebexamen.appspot.com"
 
 database_name =  'parcial_3.db'
 database_file = './' + database_name
