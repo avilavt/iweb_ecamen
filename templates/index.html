@@ -35,6 +35,7 @@
           req.open("POST",urlEmail,true);
           req.setRequestHeader('Access-Control-Allow-Origin','*');
           var datajson = JSON.stringify({"email":profile.getEmail()});
+          console.log(datajson);
           req.send(datajson);
           //var email_or = profile.getEmail();
           //document.getElementById('origenEmail').value = email_or;
