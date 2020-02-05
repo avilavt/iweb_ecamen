@@ -72,6 +72,13 @@ def home_email():
                 mensaje = {'idMensaje' : response[index][0], 'origen' : response[index][1], 'destino': response[index][2], 'contenido': response[index][3], 'fecha_y_hora': response[index][4]}
                 lista.append(mensaje)
                 index += 1
+            response = mensajesDB.sql_find_origen_destino(destino, origen)
+            index = 0
+            print(str(response))
+            while index < len(response):
+                mensaje = {'idMensaje' : response[index][0], 'origen' : response[index][1], 'destino': response[index][2], 'contenido': response[index][3], 'fecha_y_hora': response[index][4]}
+                lista.append(mensaje)
+                index += 1
             print(lista)
         except RuntimeError as exc:
             mensaje, codigo = exc.args
