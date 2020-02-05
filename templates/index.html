@@ -37,6 +37,7 @@
           //var datajson = JSON.stringify({"email":profile.getEmail()});
           //req.send(datajson);
           document.gegetElementById('origenEmail').value = profile.getgetEmail();
+          document.gegetElementById('email_origen').value = profile.getgetEmail();
         }
         </script>
 
@@ -45,7 +46,7 @@
             <h2 class="h3 mb-3 font-weight-normal">Lista de mensajes</h2>
             <label for="origenEmail" class="sr-only">Origen</label>
             <input type="hidden" id="origen" name="origen" value="{{origen}}">
-            <p>{{origen}}</p>
+            <p id="email_origen">{{origen}}</p>
             <label for="destinoEmail" class="sr-only">Destino</label>
             <input type="email" id="destinoEmail" name="destino" class="form-control" placeholder="" required autofocus>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Buscar</button>
