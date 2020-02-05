@@ -133,8 +133,7 @@ class MensajesDatabase:
         #print('sql_find_origen_destino = ' + query)
         self.cursorObj.execute(query)
         rows = self.cursorObj.fetchall()
-        if not rows:
-            raise ValueError(['Message not found',"404"])
+        
         for row in rows:
             lista.append(row)
         return lista
