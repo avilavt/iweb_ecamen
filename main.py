@@ -47,7 +47,7 @@ def home():
         origen = response['email']
         print('Origen = '+ origen)
 
-    return render_template('index.html',url_client=url_cliente)
+    return render_template('index.html',origen=origen,url_client=url_cliente)
 
 
 
